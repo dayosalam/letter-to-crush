@@ -5,6 +5,10 @@ const gif = document.querySelector(".gif");
 const tenorGifEmbed = document.querySelector(".tenor-gif-embed-container");
 const contentContainer = document.querySelector(".content-container"); // New parent div
 
+
+// Initially hide the Yes button
+yesBtn.style.display = "none";
+
 // Change text and replace the initial gif with the Tenor GIF when the Yes button is clicked
 yesBtn.addEventListener("click", () => {
   question.innerHTML = "Congrats you get a lifetime of Sara😘";
@@ -25,6 +29,10 @@ yesBtn.addEventListener("click", () => {
 
 // Make the No button move randomly on hover
 noBtn.addEventListener("mouseover", () => {
+
+  // Show the Yes button when hovering over the No button
+  yesBtn.style.display = "block";
+
   const wrapper = document.querySelector(".wrapper");
   const wrapperRect = wrapper.getBoundingClientRect();
   const noBtnRect = noBtn.getBoundingClientRect();
@@ -43,6 +51,10 @@ noBtn.addEventListener("mouseover", () => {
 
 // Move the No button randomly when it is clicked
 noBtn.addEventListener("click", () => {
+
+  // Show the Yes button when hovering over the No button
+  yesBtn.style.display = "block";
+
   const wrapper = document.querySelector(".wrapper");
   const wrapperRect = wrapper.getBoundingClientRect();
   const noBtnRect = noBtn.getBoundingClientRect();
